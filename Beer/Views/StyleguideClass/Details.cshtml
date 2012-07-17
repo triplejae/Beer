@@ -1,0 +1,13 @@
+﻿@model Beer.Models.Category
+
+    <h3>@Html.ActionLink("Styles", "Index") |  @Html.DisplayFor(model => model.CategoryName)</h3>
+    <ul>
+    @foreach (var subCategory in Model.SubCategories)
+    {
+        <li>@Html.ActionLink(@subCategory.SubCategoryName, "SubCategory",  new { id=subCategory.SubCategoryID })</li>
+    }
+    </ul>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.StyleguideClassID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

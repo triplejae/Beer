@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Beer.Models.StyleguideClass>
+<p>@ViewBag.intro</p>
+@foreach (var item in Model)
+{
+    <h3>@item.StyleguideClassName.ToUpper()</h3>
+    
+    <ul>
+    @foreach (var category in item.Categories)
+    {
+		<li>@Html.ActionLink(category.CategoryName, "Details", new { id = category.CategoryID })</li>
+    }
+    </ul>
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>

@@ -1,0 +1,9 @@
+﻿@model Beer.Models.SubCategory
+
+<ul>
+@foreach (var item in Model.BeerItems) 
+{ 
+
+<li>@Html.ActionLink(@item.BeerItemName, "Index")</li>
+}
+</ul>

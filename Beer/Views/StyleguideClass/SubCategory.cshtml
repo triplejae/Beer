@@ -1,0 +1,100 @@
+﻿@model Beer.Models.SubCategory
+
+<h3>@Html.ActionLink("Categories", "Details", new { id = @Model.CategoryID }) |  @Html.DisplayFor(model => model.SubCategoryNumber) @Html.DisplayFor(model => model.SubCategoryName)</h3>
+
+<table>
+    <tr>
+    <th colspan="2">
+        Stats
+    </th>
+    </tr>
+    <tr>
+    <td>ABV</td>
+    <td>
+        @Html.DisplayFor(model => model.ABV)
+    </td>
+    </tr>
+    <tr>
+    <td>OG</td>
+    <td>
+        @Html.DisplayFor(model => model.OG)
+    </td>
+    </tr>
+    <tr>
+    <td>FG</td>
+    <td>
+        @Html.DisplayFor(model => model.FG)
+    </td>
+    </tr>
+    <tr>
+    <td>IBU</td>
+    <td>
+        @Html.DisplayFor(model => model.IBU)
+    </td>
+    </tr>
+    <tr>
+    <td>SRM</td>
+    <td>
+        @Html.DisplayFor(model => model.SRM)
+    </td>
+    </tr>
+    <tr>
+    <td>Ingredients</td>
+    <td>
+        @Html.DisplayFor(model => model.Ingredients)
+    </td>
+    </tr>
+    <tr>
+    <th colspan="2">
+        Characteristics
+    </th>
+    </tr>
+    <tr>
+    <td>Aroma</td>
+    <td>
+        @Html.DisplayFor(model => model.Aroma)
+    </td>
+    </tr>
+    <tr>
+    <td>Appearance</td>
+    <td>
+        @Html.DisplayFor(model => model.Appearance)
+    </td>
+    </tr>
+    <tr>
+    <td>Flavor</td>
+    <td>
+        @Html.DisplayFor(model => model.Flavour)
+    </td>
+    </tr>
+    <tr>
+    <td>Mouthfeel</td>
+    <td>
+        @Html.DisplayFor(model => model.Mouthfeel)
+    </td>
+    </tr>
+    <tr>
+    <td>Impression</td>
+    <td>
+        @Html.DisplayFor(model => model.Impression)
+    </td>
+    
+    </tr>
+    <tr>
+    <td>History</td>
+    <td>
+        @Html.DisplayFor(model => model.History)
+    </td>
+    </tr>
+    <tr>
+    <td>Comments</td>
+    <td>
+        @Html.DisplayFor(model => model.Comments)
+    </td>
+    </tr>
+    </table>
+<p>
+    
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SubCategoryID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

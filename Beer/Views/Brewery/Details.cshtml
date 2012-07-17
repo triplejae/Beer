@@ -1,0 +1,40 @@
+﻿@model Beer.Models.Brewery
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Brewery</legend>
+
+    <div class="display-label">BreweryName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BreweryName)
+    </div>
+
+    <div class="display-label">Equiptment</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Equiptment)
+    </div>
+
+    <div class="display-label">AllGrain</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AllGrain)
+    </div>
+
+    <div class="display-label">Latitude</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Latitude)
+    </div>
+
+    <div class="display-label">Longitude</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Longitude)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.BreweryID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
